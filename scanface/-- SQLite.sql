@@ -1,0 +1,2 @@
+-- SQLite
+INSERT INTO scanface_scanface ( `files` ,`verified`, `distance`, `threshold`, `model`, `detector_backend`, `similarity_metric`, `facial_areas`, `time`, `data_created`, `data_updated` ) VALUES ( "mulher2.jpg-atual.jpg.json", "False", "0.9028533205506547", "0.68", "VGG-Face", "opencv", "cosine", "{'img1': {'x': 404, 'y': 109, 'w': 449, 'h': 449, 'left_eye': [696, 308], 'right_eye': [563, 266]}, 'img2': {'x': 164, 'y': 361, 'w': 840, 'h': 840, 'left_eye': [714, 676], 'right_eye': [419, 678]}}", "3.78");
