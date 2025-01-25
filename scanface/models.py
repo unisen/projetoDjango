@@ -33,6 +33,16 @@ class Recipes(models.Model):
         return recipe
     
     
+class FaceLogin(models.Model):
+    verified = models.CharField(max_length=60)
+    distance = models.CharField(max_length=60)
+    threshold = models.CharField(max_length=60)
+    model = models.CharField(max_length=60)
+    detector_backend = models.CharField(max_length=60)
+    similarity_metric = models.CharField(max_length=60)
+    facial_areas = models.CharField(max_length=400)
+    time = models.CharField(max_length=60)
+     
 
 class Scanface(models.Model):
     

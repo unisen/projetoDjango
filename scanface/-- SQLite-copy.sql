@@ -1,1 +1,1 @@
-SELECT * FROM scanface_recipes
+SELECT * FROM scanface_facelogin

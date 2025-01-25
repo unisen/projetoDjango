@@ -31,3 +31,10 @@ python .\manage.py dumpdata scanface --indent 4 > .\resultados.json
 UPDATE MODELS
 
 python manage.py makemigrations --dry-run
+
+
+CREATE A BLOG
+python manage.py startapp blog 
+python manage.py makemigrations blog
+
+python manage.py migrate blog

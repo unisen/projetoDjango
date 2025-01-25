@@ -3,17 +3,28 @@
 import pandas as pd
 import json
 # Open JSON data
-with open("resultados.json") as f:
+import sqlite3
+
+with open("resultados/mulher2.jpg-adriana4.jpg.json") as f:
     data = json.load(f)
 
 # Create A DataFrame From the JSON Data
 df = pd.DataFrame(data)
+print(df['similarity_metric'])
+
+conn = sqlite3.connect('db.sqlite3')
+#df = df.transpose()
+
+df.to_sql('scanface_tblscanface', conn, if_exists='replace', index=False)
+
+#print(df)
 
 
-print 
-
-
-def database_table_dict(tabela, tbldict, str_con):     
+def database_table_dict(tabela, tbldict):     
+    import sqlite3
+    
+    str_con = sqlite3.connect('db.sqlite3')
+    
     # connect
     from sqlalchemy import create_engine
     #'mysql+pymysql://root:root@localhost:10076/receitasdb'
